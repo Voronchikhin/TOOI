@@ -1,0 +1,25 @@
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+b = np.array([4, 5, 6, 7, 8])
+print(np.intersect1d(a, b))
+
+c = np.random.randint(0, 25, 10)
+sorted_c = np.sort(c)
+
+print(c)
+print(sorted_c)
+c[c.argmax()] = 0
+print(c)
+
+multi_dim = np.random.randint(0, 25, [3, 3])
+print(multi_dim)
+print(multi_dim.flatten())
+print(multi_dim.reshape([9]))
+
+matrix = np.random.randint(0, 25, [4, 4])
+print(matrix)
+print(matrix+matrix.max())
+
+fileMatrix = np.fromfile(file="matrix.txt",dtype=float,sep=';')
+print(fileMatrix+1)
