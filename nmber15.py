@@ -19,7 +19,8 @@ print(multi_dim.reshape([9]))
 
 matrix = np.random.randint(0, 25, [4, 4])
 print(matrix)
-print(matrix+matrix.max())
-
+print("-----------------------")
+print(matrix - matrix.max(axis=1))
+print("-----------------------")
 fileMatrix = np.fromfile(file="matrix.txt",dtype=float,sep=';')
 print(fileMatrix+1)
