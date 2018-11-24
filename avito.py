@@ -8,12 +8,12 @@ def bigrams(wordsS):
 
 with open('../stage3_test.csv', newline='', encoding='utf8') as csvfile:
     reader = csv.DictReader(csvfile)
-    rows = list
 
     counter = collections.Counter()
     words = list()
+    avito = []
     for row in reader:
-        rows.append(row)
+        avito.append(row)
         for word in row["Description"].split():
             if len(word) > 3:
                 counter[word] += 1
@@ -40,4 +40,5 @@ with open('../stage3_test.csv', newline='', encoding='utf8') as csvfile:
     # 20 most common bigrams
     print(bigramCounter.most_common(20))
     # sorted
-    print(sorted(reader, key=lambda d: float(d['Price'])))
+    print(reader.fieldnames)
+    print(sorted(avito, key=lambda d: float(d['Price'])))
